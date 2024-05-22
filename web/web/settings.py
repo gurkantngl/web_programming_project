@@ -76,7 +76,7 @@ DATABASES = {
         'NAME': 'web_project',
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'host': 'mongodb://localhost:27017',
+            'host': 'mongodb+srv://yazlab:yazlab123@cluster0.ier7hbc.mongodb.net/',
         }
     }
 }
@@ -124,4 +124,3 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-AUTH_USER_MODEL = 'my_app.User'

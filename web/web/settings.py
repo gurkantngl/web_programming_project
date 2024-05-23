@@ -124,3 +124,25 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Secure Connections
+SECURE_SSL_REDIRECT = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
+
+CSP_DEFAULT_SRC = ("'self'",)
+CSP_STYLE_SRC = ('self', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+CSP_SCRIPT_SRC = ("'self'", 'https://code.jquery.com/jquery-3.5.1.slim.min.js')
+
+# HTTP Strict Transport Security
+SECURE_HSTS_SECONDS = 3600
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+# Clickjacking Koruması
+X_FRAME_OPTIONS = 'DENY'
+
+# Cross-Site Scripting (XSS) Koruması
+SECURE_BROWSER_XSS_FILTER = True

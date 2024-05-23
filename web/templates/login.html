@@ -14,13 +14,12 @@
         background-color: #303641;
       }
     </style>
+    <script src="{% static 'js/auth.js' %}" defer></script>
   </head>
-
   <body>
     <div id="container-login">
       <div id="title"><i class="material-icons lock">lock</i> Login</div>
-
-      <form id="login" method="post" action="{% url 'login' %}">
+      <form id="loginForm">
         {% csrf_token %}
         <div class="input">
           <div class="input-addon">
@@ -28,9 +27,7 @@
           </div>
           <input id="email" name="email" placeholder="Email" type="email" required class="validate" autocomplete="off" />
         </div>
-
         <div class="clearfix"></div>
-
         <div class="input">
           <div class="input-addon">
             <i class="material-icons">vpn_key</i>
@@ -40,7 +37,6 @@
         <br />
         <input type="submit" value="Log In" />
       </form>
-
       <div class="register">
         Don't have an account yet?
         <a href="{% url 'register' %}"><button id="register-link">Register here</button></a>

@@ -1,7 +1,6 @@
-<<<<<<< HEAD
+
 from django.contrib.auth.models import AbstractUser
 from django.db import models
-=======
 from django.db import models
 from django.contrib.auth.hashers import make_password, check_password
 
@@ -17,7 +16,7 @@ class Role(models.Model):
 
     def __str__(self):
         return self.name
->>>>>>> a8bab9f348ff2f972fd809e7c602e7cc309ac7f5
+
 
 class User(models.Model):
     fullname = models.CharField(max_length=255)
@@ -25,7 +24,6 @@ class User(models.Model):
     gender = models.CharField(max_length=10)
     birth_date = models.DateField(null=True, blank=True)
     password = models.CharField(max_length=255)
-<<<<<<< HEAD
 
 class CustomUser(AbstractUser):
     gender = models.CharField(max_length=10)
@@ -35,7 +33,7 @@ class CustomUser(AbstractUser):
 class Resim(models.Model):
     ad = models.CharField(max_length=100)
     resim = models.ImageField(upload_to='images/') 
-=======
+
     roles = models.ManyToManyField(Role)
 
     def set_password(self, raw_password):
@@ -52,4 +50,4 @@ class Resim(models.Model):
 
     def __str__(self):
         return self.fullname
->>>>>>> a8bab9f348ff2f972fd809e7c602e7cc309ac7f5
+

@@ -23,7 +23,7 @@
             <i class="material-icons lock">lock</i> Register
         </div>
 
-        <form id="register" action="{% url 'register_db' %}" method="post">
+        <form id="register" method="post">
             {% csrf_token %}
 
             <div class="input">
@@ -87,7 +87,7 @@
 
         <div class="register">
             Do you already have an account?
-            <a href="{% url 'index' %}"><button id="register-link">Log In here</button></a>
+            <a href="{% url 'login' %}"><button id="register-link">Log In here</button></a>
         </div>
     </div>
 </body>
